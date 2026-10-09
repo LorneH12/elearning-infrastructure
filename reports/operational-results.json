@@ -1,0 +1,53 @@
+{
+  "tests": [
+    {
+      "test": "LRS rejects unauthenticated statement reads",
+      "status": "passed"
+    },
+    {
+      "test": "LRS stores valid completion",
+      "status": "passed"
+    },
+    {
+      "test": "LRS retrieves exact statement ID",
+      "status": "passed"
+    },
+    {
+      "test": "Identical retry is idempotent",
+      "status": "passed"
+    },
+    {
+      "test": "Conflicting duplicate rejected",
+      "status": "passed"
+    },
+    {
+      "test": "Malformed statement rejected",
+      "status": "passed"
+    },
+    {
+      "test": "Statement persists after LRS restart",
+      "status": "passed"
+    },
+    {
+      "test": "Gateway rejects unauthenticated writes",
+      "status": "passed"
+    },
+    {
+      "test": "Gateway rejects foreign origin",
+      "status": "passed"
+    },
+    {
+      "test": "Browser launches Adapt and opens lesson",
+      "status": "passed"
+    },
+    {
+      "test": "Browser event retrievable: initialized",
+      "status": "passed"
+    },
+    {
+      "test": "Browser event retrievable: experienced",
+      "status": "passed"
+    }
+  ],
+  "scope": "Local operational smoke test; Moodle and visual authoring not tested"
+}

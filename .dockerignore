@@ -1,0 +1,7 @@
+.git
+.runtime
+.env
+reports
+vendor/adapt-framework
+vendor/adapt-authoring
+vendor/sql-lrs

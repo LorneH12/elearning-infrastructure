@@ -1,0 +1,10 @@
+{
+  "name": "adapt-portfolio-xapi",
+  "version": "0.1.0",
+  "framework": ">=5.56.3",
+  "extension": "portfolioXapi",
+  "displayName": "Portfolio xAPI test bridge",
+  "main": "/js/portfolio-xapi.js",
+  "license": "GPL-3.0",
+  "description": "Local operational test bridge; not a production authentication or offline-sync solution."
+}

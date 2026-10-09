@@ -1,0 +1,11 @@
+{
+  "status": "passed",
+  "scope": "Package structure only; not runtime or conformance",
+  "checks": [
+    "manifest at zip root",
+    "launch resource exists",
+    "SCORM 1.2 version",
+    "Spoor enabled",
+    "local gateway bridge excluded"
+  ]
+}

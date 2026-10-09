@@ -1,0 +1,14 @@
+{
+  "name": "portfolio-learning-infrastructure",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node gateway/server.mjs",
+    "test": "python3 tests/operational.py",
+    "build:course": "python3 scripts/build-course.py"
+  },
+  "devDependencies": {
+    "playwright": "1.56.1"
+  }
+}

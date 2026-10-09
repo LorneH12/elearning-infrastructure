@@ -1,0 +1,16 @@
+{
+  "status": "passed",
+  "receipts": [
+    {
+      "id": "d7ce5dd3-de2b-4d22-873e-3ff7ba4a322f",
+      "verb": "initialized",
+      "activity": "course"
+    },
+    {
+      "id": "ec64f4ac-2dc7-4122-ab4e-78ecf4e65869",
+      "verb": "experienced",
+      "activity": "co-100"
+    }
+  ],
+  "errors": []
+}

@@ -1,0 +1,22 @@
+{
+  "adapt-framework": {
+    "url": "https://github.com/LorneH12/learning-player-adapt.git",
+    "commit": "f0a705d9cd24d915acef6eeb7b1f6da4ed5e4131",
+    "upstream": "https://github.com/adaptlearning/adapt_framework.git"
+  },
+  "adapt-authoring": {
+    "url": "https://github.com/LorneH12/learning-authoring-adapt.git",
+    "commit": "36a1bda954f6fd94f6a58076f713ceb1f1c7289c",
+    "upstream": "https://github.com/adaptlearning/adapt_authoring.git"
+  },
+  "moodle": {
+    "url": "https://github.com/LorneH12/learning-lms-moodle.git",
+    "commit": "215f44380bdc3ccf852a3a22e34f8423ff64033a",
+    "upstream": "https://github.com/moodle/moodle.git"
+  },
+  "sql-lrs": {
+    "url": "https://github.com/LorneH12/learning-lrs-sql.git",
+    "commit": "cb794e4bb60490b112d41490b010bb615e9fd752",
+    "upstream": "https://github.com/yetanalytics/lrsql.git"
+  }
+}
