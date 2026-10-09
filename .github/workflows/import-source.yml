@@ -1,1 +1,35 @@
-
+name: Import verified infrastructure source
+on:
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  import:
+    if: github.repository == 'LorneH12/elearning-infrastructure'
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - name: Verify and unpack reviewed source
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path, PurePosixPath
+          import hashlib, zipfile
+          archive = Path('infrastructure-source.zip')
+          expected = '044be76d3ef8ee41ea35dac866a09aa9eee31bd591e42e333a1e21610238c49a'
+          assert hashlib.sha256(archive.read_bytes()).hexdigest() == expected, 'Source checksum mismatch'
+          with zipfile.ZipFile(archive) as z:
+              for item in z.infolist():
+                  p = PurePosixPath(item.filename)
+                  assert not p.is_absolute() and '..' not in p.parts
+                  assert p.parts[0] not in ('.git', '.github', '.runtime', 'vendor', 'node_modules', '.env')
+              z.extractall('.')
+          archive.unlink()
+          PY
+      - name: Commit infrastructure files
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -A
+          git commit -m 'Publish tested infrastructure source and operational evidence'
+          git push origin HEAD:main
